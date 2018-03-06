@@ -1,0 +1,54 @@
+.portfolio {
+  .flip-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    perspective: 1000px;
+  }
+
+  .flip-cards div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 15px;
+    backface-visibility: hidden;
+  }
+
+  .flip-cards {
+    width: 200px;
+    height: 200px;
+    margin-left: 5px;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+  }
+
+  .flip-cards {
+    &:hover {
+    transform: rotateY( 180deg );
+    }
+  }
+
+  .front-card {
+    z-index: 2;
+    // background-image: url('../img/MTFProfilepics/Chelsey');
+    background-color: black;
+  }
+
+  .reverse-card {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateX( 180deg );
+  }
+
+  #card1 {
+    // background-image: url('../img/MTFProfilepics/Chelsey');
+    background-color: blueviolet;
+  }
+  #card2 {
+    // background-image: url('../img/MTFProfilepics/Chelsey');
+    background-color: blue;
+  }
+  #card3 {
+    background-color: green;
+    // background-image: url('../img/MTFProfilepics/Chelsey');
+  }
+}
